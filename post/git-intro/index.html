@@ -1,0 +1,1534 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Egor Starovoytov" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Система контроля версий git" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://example.com/post/git-intro/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.1052fab8b7700a3dc49ee23683097d66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://example.com/post/git-intro/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@wowchemy" />
+    <meta property="twitter:creator" content="@wowchemy" />
+  
+  <meta property="og:site_name" content="Academic" />
+  <meta property="og:url" content="https://example.com/post/git-intro/" />
+  <meta property="og:title" content="Система контроля версий git | Academic" />
+  <meta property="og:description" content="Система контроля версий git" /><meta property="og:image" content="https://example.com/post/git-intro/featured.webp" />
+    <meta property="twitter:image" content="https://example.com/post/git-intro/featured.webp" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-05-07T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-05-07T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/post/git-intro/"
+  },
+  "headline": "Система контроля версий git",
+  
+  "image": [
+    "https://example.com/post/git-intro/featured.webp"
+  ],
+  
+  "datePublished": "2022-05-07T00:00:00Z",
+  "dateModified": "2022-05-07T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Egor Starovoytov"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Система контроля версий git"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Система контроля версий git | Academic</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4eee1da3ae8e5c7b659ad76819ed4768" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2ed908358299dd7ab553faae685c746c.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Academic</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Academic</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Система контроля версий git</h1>
+
+  
+  <p class="page-subtitle">Система контроля версий git</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      Egor Starovoytov</span>, <span >
+      吳恩達</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 7, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/demo/">Demo</a>, <a href="/category/%E6%95%99%E7%A8%8B/">教程</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 480px; max-height: 240px;">
+  <div style="position: relative">
+    <img src="/post/git-intro/featured_hu80bb30c0e5ee5e936ef827abd2816057_3612_1200x2500_fit_q75_h2_lanczos_2.webp" width="480" height="240" alt="" class="featured-image">
+    <span class="article-header-caption">Image credit: <a href="https://unsplash.com/photos/CpkOjOcXdUY" target="_blank" rel="noopener"><strong>Unsplash</strong></a></span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="системы-контроля-версий-общие-понятия">Системы контроля версий. Общие понятия</h2>
+<p>Системы контроля версий (Version Control System, VCS) применяются при работе нескольких человек над одним проектом. Обычно основное дерево проекта хранится в локальном
+или удалённом репозитории, к которому настроен доступ для участников проекта. При
+внесении изменений в содержание проекта система контроля версий позволяет их
+фиксировать, совмещать изменения, произведённые разными участниками проекта,
+производить откат к любой более ранней версии проекта, если это требуется.
+В классических системах контроля версий используется централизованная модель,
+предполагающая наличие единого репозитория для хранения файлов. Выполнение большинства функций по управлению версиями осуществляется специальным сервером.
+Участник проекта (пользователь) перед началом работы посредством определённых
+команд получает нужную ему версию файлов. После внесения изменений, пользователь
+размещает новую версию в хранилище. При этом предыдущие версии не удаляются
+из центрального хранилища и к ним можно вернуться в любой момент. Сервер может
+сохранять не полную версию изменённых файлов, а производить так называемую дельтакомпрессию — сохранять только изменения между последовательными версиями, что
+позволяет уменьшить объём хранимых данных.
+Системы контроля версий поддерживают возможность отслеживания и разрешения
+конфликтов, которые могут возникнуть при работе нескольких человек над одним
+файлом. Можно объединить (слить) изменения, сделанные разными участниками (автоматически или вручную), вручную выбрать нужную версию, отменить изменения вовсе
+или заблокировать файлы для изменения. В зависимости от настроек блокировка не
+позволяет другим пользователям получить рабочую копию или препятствует изменению
+рабочей копии файла средствами файловой системы ОС, обеспечивая таким образом,
+привилегированный доступ только одному пользователю, работающему с файлом.
+Системы контроля версий также могут обеспечивать дополнительные, более гибкие
+функциональные возможности. Например, они могут поддерживать работу с несколькими версиями одного файла, сохраняя общую историю изменений до точки ветвления
+версий и собственные истории изменений каждой ветви. Кроме того, обычно доступна
+информация о том, кто из участников, когда и какие изменения вносил. Обычно такого
+рода информация хранится в журнале изменений, доступ к которому можно ограничить.
+В отличие от классических, в распределённых системах контроля версий центральный
+репозиторий не является обязательным.
+Среди классических VCS наиболее известны CVS, Subversion, а среди распределённых — Git, Bazaar, Mercurial. Принципы их работы схожи, отличаются они в основном
+синтаксисом используемых в работе команд.</p>
+<h2 id="основные-команды-git">Основные команды git</h2>
+<p>Наиболее часто используемые команды git:</p>
+<ul>
+<li>
+<p>создание основного дерева репозитория:
+<code>git init</code></p>
+</li>
+<li>
+<p>получение обновлений (изменений) текущего дерева из центрального репозитория:
+<code>git pull</code></p>
+</li>
+<li>
+<p>отправка всех произведённых изменений локального дерева в центральный репозиторий:
+<code>git push</code></p>
+</li>
+<li>
+<p>просмотр списка изменённых файлов в текущей директории:
+<code>git status</code></p>
+</li>
+<li>
+<p>просмотр текущих изменения:
+<code>git diff</code></p>
+</li>
+<li>
+<p>сохранение текущих изменений:</p>
+<ul>
+<li>добавить все изменённые и/или созданные файлы и/или каталоги:
+<code>git add .</code></li>
+<li>добавить конкретные изменённые и/или созданные файлы и/или каталоги:
+<code>git add имена_файлов</code></li>
+</ul>
+</li>
+<li>
+<p>удалить файл и/или каталог из индекса репозитория (при этом файл и/или каталог
+остаётся в локальной директории):
+<code>git rm имена_файлов</code></p>
+</li>
+<li>
+<p>сохранение добавленных изменений:</p>
+<ul>
+<li>сохранить все добавленные изменения и все изменённые файлы:
+<code>git commit -am 'Описание коммита'</code></li>
+<li>сохранить добавленные изменения с внесением комментария через встроенный редактор:
+<code>git commit</code></li>
+</ul>
+</li>
+<li>
+<p>создание новой ветки, базирующейся на текущей:
+<code>git checkout -b имя_ветки</code></p>
+</li>
+<li>
+<p>переключение на некоторую ветку:
+<code>git checkout имя_ветки</code>
+(при переключении на ветку, которой ещё нет в локальном репозитории, она будет
+создана и связана с удалённой)</p>
+</li>
+<li>
+<p>отправка изменений конкретной ветки в центральный репозиторий:
+<code>git push origin имя_ветки</code></p>
+</li>
+<li>
+<p>слияние ветки с текущим деревом:
+<code>git merge --no-ff имя_ветки</code></p>
+</li>
+<li>
+<p>удаление ветки:</p>
+<ul>
+<li>удаление локальной уже слитой с основным деревом ветки:
+<code>git branch -d имя_ветки</code></li>
+<li>принудительное удаление локальной ветки:
+<code>git branch -D имя_ветки</code></li>
+<li>удаление ветки с центрального репозитория:
+<code>git push origin :имя_ветки</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="стандартные-процедуры-работы-при-наличии-центрального-репозитория">Стандартные процедуры работы при наличии центрального репозитория</h2>
+<p>Работа пользователя со своей веткой начинается с проверки и получения изменений
+из центрального репозитория (при этом в локальное дерево до начала этой процедуры
+не должно было вноситься изменений):</p>
+<pre tabindex="0"><code>git checkout master
+git pull
+git checkout -b имя_ветки
+</code></pre><p>Затем можно вносить изменения в локальном дереве и/или ветке.
+После завершения внесения какого-то изменения в файлы и/или каталоги проекта
+необходимо разместить их в центральном репозитории.Для этого необходимо проверить,
+какие файлы изменились к текущему моменту:</p>
+<pre tabindex="0"><code>git status
+</code></pre><p>и при необходимости удаляем лишние файлы, которые не хотим отправлять в центральный репозиторий.
+Затем полезно просмотреть текст изменений на предмет соответствия правилам ведения чистых коммитов:</p>
+<pre tabindex="0"><code>git diff
+</code></pre><p>Если какие-либо файлы не должны попасть в коммит, то помечаем только те файлы,
+изменения которых нужно сохранить. Для этого используем команды добавления и/или
+удаления с нужными опциями:</p>
+<pre tabindex="0"><code>git add …
+git rm …
+</code></pre><p>Если нужно сохранить все изменения в текущем каталоге, то используем:</p>
+<pre tabindex="0"><code>git add .
+</code></pre><p>Затем сохраняем изменения, поясняя, что было сделано:</p>
+<pre tabindex="0"><code>git commit -am &#34;Some commit message&#34;
+</code></pre><p>и отправляем в центральный репозиторий:</p>
+<pre tabindex="0"><code>git push origin имя_ветки
+</code></pre><p>или</p>
+<pre tabindex="0"><code>git push
+</code></pre><h2 id="работа-с-локальным-репозиторием">Работа с локальным репозиторием</h2>
+<p>Создадим локальный репозиторий.
+Сначала сделаем предварительную конфигурацию, указав имя и email владельца репозитория:</p>
+<pre tabindex="0"><code>git config --global user.name &#34;Имя Фамилия&#34;
+git config --global user.email &#34;work@mail&#34;
+</code></pre><p>и настроив utf-8 в выводе сообщений git:</p>
+<pre tabindex="0"><code>git config --global quotepath false
+</code></pre><p>Для инициализации локального репозитория, расположенного, например, в каталоге
+~/tutorial, необходимо ввести в командной строке:</p>
+<pre tabindex="0"><code>cd
+mkdir tutorial
+cd tutorial
+git init
+</code></pre><p>После это в каталоге tutorial появится каталог .git, в котором будет храниться
+история изменений.</p>
+<p>Создадим тестовый текстовый файл hello.txt и добавим его в локальный репозиторий:</p>
+<pre tabindex="0"><code>echo &#39;hello world&#39; &gt; hello.txt
+git add hello.txt
+git commit -am &#39;Новый файл&#39;
+</code></pre><p>Воспользуемся командой status для просмотра изменений в рабочем каталоге, сделанных с момента последней ревизии:</p>
+<pre tabindex="0"><code>git status
+</code></pre><p>Во время работы над проектом так или иначе могут создаваться файлы, которые не
+требуется добавлять в последствии в репозиторий. Например, временные файлы, создаваемые редакторами, или объектные файлы, создаваемые компиляторами. Можно
+прописать шаблоны игнорируемых при добавлении в репозиторий типов файлов в файл
+.gitignore с помощью сервисов. Для этого сначала нужно получить список имеющихся
+шаблонов:</p>
+<pre tabindex="0"><code>curl -L -s https://www.gitignore.io/api/list
+</code></pre><p>Затем скачать шаблон, например, для C и C++</p>
+<pre tabindex="0"><code>curl -L -s https://www.gitignore.io/api/c &gt;&gt; .gitignore
+curl -L -s https://www.gitignore.io/api/c++ &gt;&gt; .gitignore
+</code></pre><h2 id="работа-с-сервером-репозиториев">Работа с сервером репозиториев</h2>
+<p>Для последующей идентификации пользователя на сервере репозиториев необходимо
+сгенерировать пару ключей (приватный и открытый):</p>
+<pre tabindex="0"><code>ssh-keygen -C &#34;Имя Фамилия &lt;work@mail&gt;&#34;
+</code></pre><p>Ключи сохраняться в каталоге ~/.ssh/.</p>
+<p>Существует несколько доступных серверов репозиториев с возможностью бесплатного
+размещения данных. Например, <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a>.
+Для работы с ним необходимо сначала завести на сайте <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> учётную запись. Затем необходимо загрузить сгенерённый нами ранее открытый ключ. 
+Для этого зайти на сайт <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> под своей учётной записью и перейти в меню GitHub setting . После этого выбрать в боковом меню GitHub setting SSH-ключи и нажать
+кнопку Добавить ключ . Скопировав из локальной консоли ключ в буфер обмена</p>
+<pre tabindex="0"><code>cat ~/.ssh/id_rsa.pub | xclip -sel clip
+</code></pre><p>вставляем ключ в появившееся на сайте поле.</p>
+<p>После этого можно создать на сайте репозиторий, выбрав в меню Репозитории
+Создать репозиторий , дать ему название и сделать общедоступным (публичным).
+Для загрузки репозитория из локального каталога на сервер выполняем следующие
+команды:</p>
+<pre tabindex="0"><code>git remote add origin
+ssh://git@github.com/&lt;username&gt;/&lt;reponame&gt;.git
+git push -u origin master
+</code></pre><p>Далее на локальном компьютере можно выполнять стандартные процедуры для работы
+с git при наличии центрального репозитория.</p>
+
+    </div>
+
+    
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/academic/">Academic</a>
+  
+  <a class="badge badge-light" href="/tag/%E5%BC%80%E6%BA%90/">开源</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://example.com/post/git-intro/&amp;text=%d0%a1%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%20%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f%20%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9%20git" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://example.com/post/git-intro/&amp;t=%d0%a1%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%20%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f%20%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9%20git" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%d0%a1%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%20%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f%20%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9%20git&amp;body=https://example.com/post/git-intro/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://example.com/post/git-intro/&amp;title=%d0%a1%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%20%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f%20%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9%20git" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=%d0%a1%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%20%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f%20%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9%20git%20https://example.com/post/git-intro/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://example.com/post/git-intro/&amp;title=%d0%a1%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b0%20%d0%ba%d0%be%d0%bd%d1%82%d1%80%d0%be%d0%bb%d1%8f%20%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9%20git" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu93e701cd136e7a139e26f66921f77636_404451_270x270_fill_q75_lanczos_center.jpg" alt="Egor Starovoytov"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://example.com/">Egor Starovoytov</a></h5>
+      <h6 class="card-subtitle">Student</h6>
+      <p class="card-text">My research interests include mathematics, programming, computer architecture and digital electronics.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/gcushen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.53d67dc2cb1ebceb89d5e2aba2f86112.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.ab2f2890dbe3e2e83579366d3d6e8fd9.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+</body>
+</html>
