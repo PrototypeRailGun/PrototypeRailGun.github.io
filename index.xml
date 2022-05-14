@@ -33,6 +33,26 @@
     </item>
     
     <item>
+      <title>Язык разметки Markdown</title>
+      <link>https://example.com/post/markdown/</link>
+      <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/post/markdown/</guid>
+      <description>&lt;h2 id=&#34;markdown&#34;&gt;Markdown&lt;/h2&gt;
+&lt;p&gt;Облегчённый язык разметки, созданный с целью обозначения форматирования в простом тексте, с максимальным сохранением его читаемости человеком, и пригодный для машинного преобразования в языки для продвинутых публикаций.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Пост по второй неделе</title>
+      <link>https://example.com/post/2nd-week/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/post/2nd-week/</guid>
+      <description>&lt;h2 id=&#34;что-сделал&#34;&gt;Что сделал&lt;/h2&gt;
+&lt;p&gt;На этой неделе я сдал лабораторные работы №5 и №6 и выполнил второй этап индивидуального проекта.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Пост по первой неделе</title>
       <link>https://example.com/post/1st-week/</link>
       <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
