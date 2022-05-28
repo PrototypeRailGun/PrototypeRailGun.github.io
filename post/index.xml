@@ -5,12 +5,35 @@
     <link>https://example.com/post/</link>
       <atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://example.com/post/</link>
     </image>
+    
+    <item>
+      <title>Пост по четвертой неделе</title>
+      <link>https://example.com/post/4th-week/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/post/4th-week/</guid>
+      <description>&lt;h2 id=&#34;что-сделал&#34;&gt;Что сделал&lt;/h2&gt;
+&lt;p&gt;На этой неделе я сдал лабораторные работы №9 и №10 и выполнил четвертый этап индивидуального проекта.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Языки научного программироания</title>
+      <link>https://example.com/post/sc-prog-lang/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.com/post/sc-prog-lang/</guid>
+      <description>&lt;h1 id=&#34;язык-научного-программирования&#34;&gt;Язык научного программирования&lt;/h1&gt;
+&lt;p&gt;В компьютерном программировании , научный язык программирования может относиться к двум степеням той же концепции.&lt;/p&gt;
+&lt;p&gt;В широком смысле научный язык программирования - это язык программирования, который широко используется в вычислительной науке и вычислительной математике . В этом смысле C / C ++ и Python [1] можно рассматривать как языки научного программирования.&lt;/p&gt;
+&lt;p&gt;В более широком смысле научный язык программирования - это язык, который разработан и оптимизирован для использования математических формул и матриц . [2] Такие языки характеризуются не только наличием библиотек, выполняющих математические или научные функции, но и синтаксисом самого языка. [3] Например, ни C ++, ни Python не имеют встроенных типов матриц или функций для матричной арифметики (сложение, умножение и т. Д.); вместо этого эта функция доступна через стандартные библиотеки. Языки научного программирования в более строгом смысле включают ALGOL , APL , Fortran , J , Julia ,Maple , MATLAB и R . [4] [5]&lt;/p&gt;
+&lt;p&gt;Языки научного программирования не следует путать с научным языком в целом, который свободно относится к более высоким стандартам точности, правильности и краткости, ожидаемым от практиков научного метода .&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Оформление отчета</title>
